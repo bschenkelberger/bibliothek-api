@@ -8,9 +8,6 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 public interface CustomerLendBookRepository extends PagingAndSortingRepository<CustomerLendBookEntity, Long> {
     List<CustomerLendBookEntity> findAll();
 

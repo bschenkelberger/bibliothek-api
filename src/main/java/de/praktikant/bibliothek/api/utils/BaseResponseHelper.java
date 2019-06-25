@@ -7,9 +7,6 @@ import de.praktikant.bibliothek.api.service.common.Severity;
 
 import java.util.List;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 public class BaseResponseHelper {
     public static void mapResultToResponse(BaseResponse baseResponse, Result result) {
         baseResponse.getMessages().addAll(result.getErrorMessages());

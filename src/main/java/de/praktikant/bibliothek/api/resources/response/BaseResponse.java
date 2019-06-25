@@ -5,9 +5,6 @@ import de.praktikant.bibliothek.api.service.common.Message;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 public class BaseResponse {
     private Boolean successful;
     private List<Message> messages = new ArrayList<>();

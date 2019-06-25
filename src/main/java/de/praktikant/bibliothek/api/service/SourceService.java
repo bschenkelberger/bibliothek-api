@@ -13,9 +13,6 @@ import de.praktikant.bibliothek.api.model.mapper.SourceMapper;
 import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.service.common.Severity;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @Service
 public class SourceService {
 

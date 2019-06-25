@@ -12,9 +12,6 @@ import de.praktikant.bibliothek.api.backend.hibternate.repository.customer.Custo
 import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.service.common.Severity;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @Service
 public class CustomerService {
     @Autowired

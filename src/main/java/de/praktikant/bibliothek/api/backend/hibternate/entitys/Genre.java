@@ -3,9 +3,6 @@ package de.praktikant.bibliothek.api.backend.hibternate.entitys;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @MappedSuperclass
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Genre {

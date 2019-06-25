@@ -13,9 +13,6 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(name = "customer")

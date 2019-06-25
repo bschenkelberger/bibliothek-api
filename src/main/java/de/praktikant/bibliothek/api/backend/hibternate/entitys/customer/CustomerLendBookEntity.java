@@ -9,9 +9,6 @@ import javax.persistence.*;
 
 import java.time.LocalDate;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(name = "customer_lend_book")

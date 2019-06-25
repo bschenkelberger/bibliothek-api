@@ -8,9 +8,6 @@ import de.praktikant.bibliothek.api.resources.response.BaseResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BookListResponse extends BaseResponse {
     private List<BookEntity> books = new ArrayList<>();

@@ -23,9 +23,6 @@ import de.praktikant.bibliothek.api.service.CustomerService;
 import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.utils.BaseResponseHelper;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/customer")

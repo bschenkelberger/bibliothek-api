@@ -7,9 +7,6 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 public interface BookSourceRepository extends CrudRepository<BookSourceEntity, Long> {
     List<BookSourceEntity> findAll();
 

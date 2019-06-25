@@ -12,9 +12,6 @@ import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(name = "book_genre")

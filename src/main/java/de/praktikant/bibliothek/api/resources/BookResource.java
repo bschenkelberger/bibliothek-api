@@ -17,9 +17,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/books")
