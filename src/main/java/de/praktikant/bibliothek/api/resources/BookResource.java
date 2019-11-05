@@ -44,6 +44,13 @@ import de.praktikant.bibliothek.api.utils.BaseResponseHelper;
  * https://docs.spring.io/spring/docs/4.2.2.RELEASE/spring-framework-reference/htmlsingle/#cors]
  * </p>
  */
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/books")

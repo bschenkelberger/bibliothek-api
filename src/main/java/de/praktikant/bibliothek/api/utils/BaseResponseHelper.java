@@ -7,6 +7,8 @@ import de.praktikant.bibliothek.api.service.common.Message;
 import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.service.common.Severity;
 
+import java.util.List;
+
 public class BaseResponseHelper {
     public static void mapResultToResponse(BaseResponse baseResponse, Result<?> result) {
         baseResponse.getMessages().addAll(result.getErrorMessages());

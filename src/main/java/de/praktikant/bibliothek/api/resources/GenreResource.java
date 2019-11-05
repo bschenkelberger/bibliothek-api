@@ -25,6 +25,12 @@ import de.praktikant.bibliothek.api.utils.BaseResponseHelper;
  * </p>
  * Siehe auch JavaDoc zu {@linkplain BookResource}.
  */
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/genres")
