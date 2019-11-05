@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.time.LocalDateTime;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Message {
     private Severity severity;

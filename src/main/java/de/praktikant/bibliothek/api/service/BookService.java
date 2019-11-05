@@ -6,20 +6,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.Genre;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.Source;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.books.BookEntity;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.customer.CustomerEntity;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.customer.CustomerLendBookEntity;
-import de.praktikant.bibliothek.api.backend.hibternate.repository.book.BookRepository;
-import de.praktikant.bibliothek.api.backend.hibternate.repository.customer.CustomerLendBookRepository;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.Genre;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.Source;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.books.BookEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.customer.CustomerEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.customer.CustomerLendBookEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.repository.book.BookRepository;
+import de.praktikant.bibliothek.api.backend.hibernate.repository.customer.CustomerLendBookRepository;
 import de.praktikant.bibliothek.api.model.enums.MediaType;
 import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.service.common.Severity;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @Service
 public class BookService {
     @Autowired

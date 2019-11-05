@@ -5,16 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.customer.CustomerEntity;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.customer.CustomerLendBookEntity;
-import de.praktikant.bibliothek.api.backend.hibternate.repository.customer.CustomerLendBookRepository;
-import de.praktikant.bibliothek.api.backend.hibternate.repository.customer.CustomerRepository;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.customer.CustomerEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.customer.CustomerLendBookEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.repository.customer.CustomerLendBookRepository;
+import de.praktikant.bibliothek.api.backend.hibernate.repository.customer.CustomerRepository;
 import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.service.common.Severity;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @Service
 public class CustomerService {
     @Autowired
@@ -70,5 +67,4 @@ public class CustomerService {
 
         return new Result<>(lendBooksHistoryList);
     }
-
 }

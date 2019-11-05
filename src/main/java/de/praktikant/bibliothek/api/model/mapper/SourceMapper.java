@@ -3,12 +3,9 @@ package de.praktikant.bibliothek.api.model.mapper;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.Source;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.books.BookSourceEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.Source;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.books.BookSourceEntity;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 public class SourceMapper {
 
 	public static Source fromBookSource(BookSourceEntity bookSourceEntity) {

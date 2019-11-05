@@ -3,12 +3,9 @@ package de.praktikant.bibliothek.api.model.mapper;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.Genre;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.books.BookGenreEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.Genre;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.books.BookGenreEntity;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 public class GenreMapper {
 
 	public static Genre fromBookGenre(BookGenreEntity bookGenreEntity) {

@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.customer.CustomerEntity;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.customer.CustomerLendBookEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.customer.CustomerEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.customer.CustomerLendBookEntity;
 import de.praktikant.bibliothek.api.resources.response.book.LendBookHistoryListResponse;
 import de.praktikant.bibliothek.api.resources.response.customer.CustomerListResponse;
 import de.praktikant.bibliothek.api.resources.response.customer.CustomerResponse;
@@ -24,7 +24,10 @@ import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.utils.BaseResponseHelper;
 
 /**
- * @author Bjoern Schenkelberger, Postbank Systems AG
+ * <p>
+ * Diese Klasse dient als ein REST-Controller und bietet zahlreiche Bibliotheks-Funktionen zur Kundenverwaltung an.
+ * </p>
+ * Siehe auch JavaDoc zu {@linkplain BookResource}.
  */
 @RestController
 @CrossOrigin
@@ -33,6 +36,9 @@ public class CustomerResource {
     @Autowired
     private CustomerService customerService;
 
+    /**
+     * @return Eine Liste von CustomerEntities, gepackt in eine Spring-ResponseEntity.
+     */
     @GetMapping
     public ResponseEntity<CustomerListResponse> getCustomer() {
         Result<List<CustomerEntity>> result = customerService.getAllCustomer();
@@ -47,6 +53,10 @@ public class CustomerResource {
         return ResponseEntity.ok(response);
     }
 
+    /**
+     * @param id Identifikation eines Kunden
+     * @return Die gesuchte CustomerEntity, gepackt in eine Spring-ResponseEntity.
+     */
     @GetMapping(value = "/{id}")
     public ResponseEntity<CustomerResponse> getCustomerById(@PathVariable("id") Long id) {
         Result<CustomerEntity> result = customerService.getCustomerById(id);
@@ -61,6 +71,12 @@ public class CustomerResource {
         return ResponseEntity.ok(response);
     }
 
+    /**
+     * Mit der POST-Methode wird ein Insert eines Kunden in die Datenbank ausgeführt.
+     * 
+     * @param customer der anzulegende Kunde
+     * @return Die CustomerEntity, gepackt in eine Spring-ResponseEntity.
+     */
     @PostMapping
     public ResponseEntity<CustomerResponse> postCustomer(@RequestBody CustomerEntity customer) {
         Result<CustomerEntity> result = customerService.addCustomer(customer);
@@ -75,6 +91,12 @@ public class CustomerResource {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
+    /**
+     * Mit der PUT-Methode wird ein Update eines Kunden in der Datenbank ausgeführt.
+     * 
+     * @param customer das geänderte Kunden-Objekt
+     * @return Die CutomerEntity, gepackt in eine Spring-ResponseEntity.
+     */
     @PutMapping
     public ResponseEntity<CustomerResponse> putCustomer(@RequestBody CustomerEntity customer) {
         Result<CustomerEntity> result = customerService.updateCustomer(customer);
@@ -89,6 +111,13 @@ public class CustomerResource {
         return ResponseEntity.ok(response);
     }
 
+    /**
+     * Diese Methode liefert eine Liste von Kunden-Buch-Beziehungen zu einem Kunden (= Bücher, die dieser Kunde einmal entliehen hatte oder noch
+     * hat).
+     * 
+     * @param id Identifikation des Kunden
+     * @return Eine Liste von CustomerLendBookEntities, gepackt in eine Spring-ResponseEntity.
+     */
     @GetMapping(value = "/{id}/books")
     public ResponseEntity<LendBookHistoryListResponse> getLendBooks(@PathVariable("id") Long id) {
         Result<List<CustomerLendBookEntity>> result = customerService.getLendBooks(id);
@@ -102,4 +131,5 @@ public class CustomerResource {
 
         return ResponseEntity.ok(response);
     }
+
 }

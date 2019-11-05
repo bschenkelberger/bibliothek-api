@@ -1,11 +1,8 @@
 package de.praktikant.bibliothek.api.resources.response.customer;
 
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.customer.CustomerEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.customer.CustomerEntity;
 import de.praktikant.bibliothek.api.resources.response.BaseResponse;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 public class CustomerResponse extends BaseResponse {
     private CustomerEntity customer;
 

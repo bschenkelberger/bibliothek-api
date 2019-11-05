@@ -1,17 +1,14 @@
 package de.praktikant.bibliothek.api.utils;
 
+import java.util.List;
+
 import de.praktikant.bibliothek.api.resources.response.BaseResponse;
 import de.praktikant.bibliothek.api.service.common.Message;
 import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.service.common.Severity;
 
-import java.util.List;
-
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 public class BaseResponseHelper {
-    public static void mapResultToResponse(BaseResponse baseResponse, Result result) {
+    public static void mapResultToResponse(BaseResponse baseResponse, Result<?> result) {
         baseResponse.getMessages().addAll(result.getErrorMessages());
 
         if (hasErrors(result.getErrorMessages())) {

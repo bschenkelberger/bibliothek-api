@@ -5,17 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.Genre;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.books.BookGenreEntity;
-import de.praktikant.bibliothek.api.backend.hibternate.repository.book.BookGenreRepository;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.Genre;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.books.BookGenreEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.repository.book.BookGenreRepository;
 import de.praktikant.bibliothek.api.model.enums.MediaType;
 import de.praktikant.bibliothek.api.model.mapper.GenreMapper;
 import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.service.common.Severity;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @Service
 public class GenreService {
 

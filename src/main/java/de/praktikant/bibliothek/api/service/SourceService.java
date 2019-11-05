@@ -5,17 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.Source;
-import de.praktikant.bibliothek.api.backend.hibternate.entitys.books.BookSourceEntity;
-import de.praktikant.bibliothek.api.backend.hibternate.repository.book.BookSourceRepository;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.Source;
+import de.praktikant.bibliothek.api.backend.hibernate.entitys.books.BookSourceEntity;
+import de.praktikant.bibliothek.api.backend.hibernate.repository.book.BookSourceRepository;
 import de.praktikant.bibliothek.api.model.enums.MediaType;
 import de.praktikant.bibliothek.api.model.mapper.SourceMapper;
 import de.praktikant.bibliothek.api.service.common.Result;
 import de.praktikant.bibliothek.api.service.common.Severity;
 
-/**
- * @author Bjoern Schenkelberger, Postbank Systems AG
- */
 @Service
 public class SourceService {
 
