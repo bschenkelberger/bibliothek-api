@@ -21,6 +21,7 @@ public class CustomerEntity {
     private String name;
     private String firstName;
     private List<CustomerLendBookEntity> customerLendBooks;
+    private Boolean admin;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -49,6 +50,15 @@ public class CustomerEntity {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+    
+    @Column(name = "customer_admin", nullable = false)
+    public boolean getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
     }
 
     @JsonIgnore

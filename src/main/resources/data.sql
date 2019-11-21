@@ -40,7 +40,8 @@ VALUES ('Harry Potter und die Kammer des Schreckens', 0, 0, 9, 1);
 INSERT INTO book (book_name, book_lend, book_deleted, book_genre_id, book_source_id)
 VALUES ('Leichenblaesse', 0, 0, 24, 1);
 
-INSERT INTO customer (customer_name, customer_first_name) VALUES ('Mustermann', 'Max');
+INSERT INTO customer (customer_name, customer_first_name, customer_admin) VALUES ('Admin', 'Adam', 1);
+INSERT INTO customer (customer_name, customer_first_name, customer_admin) VALUES ('Mustermann', 'Max', 0);
 
 INSERT INTO customer_lend_book (customer_lend_book_lend_on_date, customer_lend_book_returned_on_date, book_id, customer_id)
-VALUES ('2017-11-11', '2018-01-07', 3, 1);
+VALUES ('2017-11-11', '2018-01-07', 3, 2);
