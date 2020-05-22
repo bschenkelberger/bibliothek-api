@@ -19,44 +19,14 @@
             <id>dev</id>
             <properties>
                 <spring.jpa.show-sql>true</spring.jpa.show-sql>
-                <spring.jpa.properties.hibernate.dialect>org.hibernate.dialect.MySQL5Dialect</spring.jpa.properties.hibernate.dialect>
+                <spring.jpa.properties.hibernate.dialect>org.hibernate.dialect.H2Dialect</spring.jpa.properties.hibernate.dialect>
                 <spring.jpa.hibernate.ddl-auto>create-drop</spring.jpa.hibernate.ddl-auto>
                 <spring.jpa.hibernate.format_sql>false</spring.jpa.hibernate.format_sql>
-                <spring.datasource.driverClassName>com.mysql.jdbc.Driver</spring.datasource.driverClassName>
-                <spring.datasource.url>jdbc:mysql://localhost:3306/bibliothek_dev</spring.datasource.url>
+                <spring.datasource.driverClassName>org.h2.Driver</spring.datasource.driverClassName>
+                <spring.datasource.url>jdbc:h2:mem:bibliothek_dev</spring.datasource.url>
                 <spring.datasource.username>bibliothek</spring.datasource.username>
-                <spring.datasource.password>developer</spring.datasource.password>
-                <spring.datasource.initialize>true</spring.datasource.initialize>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>test</id>
-            <properties>
-                <spring.jpa.show-sql>true</spring.jpa.show-sql>
-                <spring.jpa.properties.hibernate.dialect>org.hibernate.dialect.MySQL5Dialect</spring.jpa.properties.hibernate.dialect>
-                <spring.jpa.hibernate.ddl-auto>create-drop</spring.jpa.hibernate.ddl-auto>
-                <spring.jpa.hibernate.format_sql>false</spring.jpa.hibernate.format_sql>
-                <spring.datasource.driverClassName>com.mysql.jdbc.Driver</spring.datasource.driverClassName>
-                <spring.datasource.url>jdbc:mysql://localhost:3306/bibliothek_test</spring.datasource.url>
-                <spring.datasource.username>bibliothek</spring.datasource.username>
-                <spring.datasource.password>developer</spring.datasource.password>
-                <spring.datasource.initialize>false</spring.datasource.initialize>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>prod</id>
-            <properties>
-                <spring.jpa.show-sql>true</spring.jpa.show-sql>
-                <spring.jpa.properties.hibernate.dialect>org.hibernate.dialect.MySQL5Dialect</spring.jpa.properties.hibernate.dialect>
-                <spring.jpa.hibernate.ddl-auto>validate</spring.jpa.hibernate.ddl-auto>
-                <spring.jpa.hibernate.format_sql>false</spring.jpa.hibernate.format_sql>
-                <spring.datasource.driverClassName>com.mysql.jdbc.Driver</spring.datasource.driverClassName>
-                <spring.datasource.url>jdbc:mysql://localhost:3306/bibliothek_prod</spring.datasource.url>
-                <spring.datasource.username>bibliothek</spring.datasource.username>
-                <spring.datasource.password>developer</spring.datasource.password>
-                <spring.datasource.initialize>false</spring.datasource.initialize>
+                <spring.datasource.password></spring.datasource.password>
+                <spring.datasource.initialization-mode>always</spring.datasource.initialization-mode>
             </properties>
         </profile>
     </profiles>
@@ -66,21 +36,29 @@
         <jackson.datatype.version>2.8.3</jackson.datatype.version>
     </properties>
 
-    <dependencies>
-        <!-- Spring Framework -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 
         <!-- 3rd Party -->
         <dependency>
@@ -88,20 +66,22 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
             <version>${jackson.datatype.version}</version>
         </dependency>
+ 
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
+         
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-java8</artifactId>
             <version>5.0.12.Final</version>
         </dependency>
-
         <!-- Test -->
         <dependency>
             <groupId>junit</groupId>
