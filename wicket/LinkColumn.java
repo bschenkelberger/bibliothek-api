@@ -36,8 +36,6 @@ import org.apache.wicket.util.resource.StringResourceStream;
  * Die PropertyExpression wird nur ausgewertet, falls {@link #createLabelModel(org.apache.wicket.model.IModel)} nicht
  * überschrieben wurde (und dort nicht <code>super.createLabelModel(IModel)</code> aufgerufen wird).
  * 
- * @author Baschir Jaghoori (mgm technology partners GmbH)
- * @author René Wächter (Postbank Systems AG)
  * @param <T> Typ der in der Tabelle angezeigten Daten.
  * @param <S> Typ der Property
  */
